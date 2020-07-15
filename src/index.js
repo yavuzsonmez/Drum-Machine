@@ -6,15 +6,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      track: "Click or Press buttons !"
+      track: "Click or Press caps lock + button !"
     }
     this.handleTrigger = this.handleTrigger.bind(this);
     this.handleDisplay = this.handleDisplay.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
+
     componentDidMount(){
   document.addEventListener("keydown", this.handleKeyPress);
+  var audio_q = document.getElementById("Q");
+  var audio_w = document.getElementById("W");
+  var audio_e = document.getElementById("E");
+  var audio_a = document.getElementById("A");
+  var audio_s = document.getElementById("S");
+  var audio_d = document.getElementById("D");
+  var audio_z = document.getElementById("Z");
+  var audio_x = document.getElementById("X");
+  var audio_c = document.getElementById("C");
+
+  audio_q.volume = 0.2;
+  audio_w.volume = 0.2;
+  audio_e.volume = 0.2;
+  audio_a.volume = 0.2;
+  audio_s.volume = 0.2;
+  audio_d.volume = 0.2;
+  audio_z.volume = 0.2;
+  audio_x.volume = 0.2;
+  audio_c.volume = 0.2;
   }
     componentWillUnmount(){
   document.removeEventListener("keydown", this.handleKeyPress);
@@ -77,12 +97,13 @@ class App extends React.Component {
         this.handleTrigger("C");
         this.handleDisplay("RP4_KICK_1");
         break;
-      
-  
+      default:
+        console.log(" ");
     }
   }
   
   render() {
+
       return (
         <div id="drum-machine">
     <div id="display">

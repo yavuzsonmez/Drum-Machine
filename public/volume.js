@@ -1,9 +1,0 @@
-document.getElementById("Q").volume = 0.2;
-document.getElementById("W").volume = 0.2;
-document.getElementById("E").volume = 0.2;
-document.getElementById("A").volume = 0.2;
-document.getElementById("S").volume = 0.2;
-document.getElementById("D").volume = 0.2;
-document.getElementById("Z").volume = 0.2;
-document.getElementById("X").volume = 0.2;
-document.getElementById("C").volume = 0.2;
